@@ -27,7 +27,7 @@
       <ul>
         <li><a href="http://localhost/tugasA/index.php">Beranda</a></li>
         <li><a href="http://localhost/tugasA/profilsudah/index.php">Profil</a></li>
-        <li><a href="http://localhost/tugasA/websudah/logout.php">logout</a></li>
+        <li><a href="http://localhost/tugasA/login/index.php">login</a></li>
       </ul>
     </div>
 
@@ -41,7 +41,15 @@
     <div class="about">
       <img src="shield.jpg" width = 400px height = auto hspace = "400" vspace = "20">
       <div class="container">
-        <form action="" method="POST">
+        <form action="proses.php" method="POST">
+          <div class="col-10 label">
+            <label for=""><font color = "white">Nama : </font></label>
+            <br><input type="text" name="nama" autocomplete = "off"/><br>
+          </div>
+          <div class="col-10 label">
+            <label for=""><font color = "white">Umur : </font></label>
+            <br><input type="text" name="umur"/><br>
+          </div>
         <div class="col-10 label">
           <label for=""><font color = "white">1. Apakah Anda Kesulitan bernafas ,Nyeri dada yang parah,Sulit untuk bangun,Merasa kebingungan,Penurunan kesadaran</font></label>
           <select class="form-control" name="">
@@ -91,25 +99,13 @@
           </select>
         </div>
         <div class="col-10 label">
-          <label for=""><font color = "white">7. Suhu Tubuh :</font></label>
+          <label for=""><font color = "white">7.gejala yang anda Alami : </font></label>
+          <br><input type="text" name="gejala" placeholder="gejala yang anda alami"><br>
+        </div>
+        <div class="col-10 label">
+          <label for=""><font color = "white">8. Suhu Tubuh :</font></label>
           <br><input type="text" name="suhu" placeholder="derajat"> <br>
         </div>
-        <div id="Submit">
-          <br>
-        <textarea name="pesan" rows="1" cols="110" placeholder="pesan anda" >
-          <?php
-            if(isset($_POST['suhu'])) {
-              $suhu = $_POST['suhu'];
-              if ($suhu >37 ){
-                echo "Anda memiliki kemungkinan positif corona, suhu tubuh Anda tinggi segera periksakan diri Anda";
-              }else{
-                echo "Anda negatif corona, suhu tubuh Anda normal";
-              }
-            }
-
-            ?>
-            </textarea>
-          </div>
         <div class="col-10 label">
           <label>
           <br><input type="submit" name="Submit" value="Submit" class = "btn btn-primary"><br>

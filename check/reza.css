@@ -103,14 +103,12 @@ div.about .left h1{
   font-size: 50px;
   font-family: sans-serif;
   font-weight: 20;
-  border-right: 10px solid blue;
-  padding-right: 10px;
 }
 
 div.about .left p{
   text-align:left;
   font-size: 30px;
-  color: grey;
+  color: white;
 }
 
 div.about .right{
